@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="shortcut icon" href="gamepad-solid.ico (1)" type="image/x-icon">
+  <link rel="icon" href="gamepad-solid.ico (1)" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel ="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@800&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/49ea9dc72c.js" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="/CSS/styles.css">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Вход / Регистрация</title>
+
+
+
+</head>
+
+<body style="display: flex">
+  <header>
+    <a href="index.html" class="logo"><i class="ri-game-line"></i><span>BestGames</span></a>
+
+    <ul class="navbar">
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="play.html" >Игры</a></li>
+        <li><a href="#">О нас</a></li>
+    </ul>
+
+    <div class="main">
+        <a href="#" class="user"><i class="ri-user-shared-2-line"></i>Login</a>
+        <a href="#">1000</a>
+        <div class="bx bx-menu" id="menu-icon"></div>
+    </div>
+  </header>
+
+  <div class="wrapper">
+    <div class="title-text">
+      <div class="title login">Login</div>
+      <div class="title signup">Sign Up</div>
+    </div>
+    <div class="form-container">
+      <div class="slide-controls">
+        <input type="radio" name="slide" id="login" checked>
+        <input type="radio" name="slide" id="signup">
+        <label for="login" class="slide login" style="color: #fff;">Login</label>
+        <label for="signup" class="slide signup" style="color: #fff;">Sign Up</label>
+        <div class="slider-tab"></div>
+      </div>
+      <div class="form-inner">
+        <form id="loginForm" class="login" action="login.php" method="POST">
+          <div class="field">
+              <input type="text" name="email" placeholder="Email Address" required>
+          </div>
+          <div class="field">
+              <input type="password" name="password" placeholder="Password" required>
+          </div>
+          <div class="field btn">
+              <div class="btn-layer"></div>
+              <input type="submit" value="Login">
+          </div>
+      </form>
+      
+      <form id="signupForm" class="signup" action="register.php" method="POST">
+          <div class="field">
+              <input type="text" name="email" placeholder="Email Address" required>
+          </div>
+          <div class="field">
+              <input type="password" name="password" placeholder="Password" required>
+          </div>
+          <div class="field">
+              <input type="password" name="confirm_password" placeholder="Confirm password" required>
+          </div>
+          <div class="field btn">
+              <div class="btn-layer"></div>
+              <input type="submit" value="Signup">
+          </div>
+      </form>
+      
+      </div>
+    </div>
+  </div>
+
+
+
+
+</body> 
+    <script src="script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</html>

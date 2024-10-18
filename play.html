@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="shortcut icon" href="gamepad-solid.ico (1)" type="image/x-icon">
+  <link rel="icon" href="gamepad-solid.ico (1)" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel ="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@800&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/49ea9dc72c.js" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="/CSS/styles.css">
+  <link rel="stylesheet" href="/CSS/playStyles.css">
+
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Игры в браузере</title>
+</head>
+
+<body>
+
+  <header>
+    <a href="#" class="logo"><i class="ri-game-line"></i><span>BestGames</span></a>
+
+    <ul class="navbar">
+      <li><a href="index.html">Главная</a></li>
+      <li><a href="#" class="active">Игры</a></li>
+      <li><a href="#">О нас</a></li>
+
+    </ul>
+
+    <div class="main">
+      <a href="log.html" class="user"><i class="ri-user-shared-2-line"></i>Login</a>
+      <a href="#">1000</a>
+      <div class="bx bx-menu" id="menu-icon"></div>
+
+    </div>
+  </header>
+  <section>
+    <!-- Swiper container -->
+    <div class="swiper mySwiper container">
+      <div class="swiper-wrapper content">
+        
+        <!-- Swiper slide item 1 -->
+        <div class="swiper-slide card">
+          <div class="card-content">
+            <!-- Profile image -->
+            <div class="image">
+              <img src="https://img.freepik.com/free-vector/colorful-wheel-fortune-luck-design_1017-31406.jpg?t=st=1729265220~exp=1729268820~hmac=bf6b4e712e16fe83ce770142989710205993263e580398e976b7f51281db9995&w=740" alt="Profile Image 1" />
+            </div>
+  
+            <!-- Name and profession -->
+            <div class="name-profession">
+              <span class="name">Колесо фортуны</span>
+              <span class="profession">Простое Колесо фортуны</span>
+            </div>
+  
+            <!-- Rating -->
+            <div class="rating">
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+              <i class="far fa-star"></i>
+              <i class="far fa-star"></i>
+              <i class="far fa-star"></i>
+              <i class="far fa-star"></i>
+              
+            </div>
+  
+            <!-- Buttons -->
+            <div class="button">
+              <button class="aboutMe">Играть</button>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Swiper slide item 2 -->
+        <div class="swiper-slide card">
+          <div class="card-content">
+            <!-- Profile image -->
+            <div class="image">
+              <img src="https://img.freepik.com/free-vector/gold-coin-seamless-pattern-background-money-vector-finance-illustration_53876-136818.jpg?t=st=1729265944~exp=1729269544~hmac=353a7434b62dd932cc96e9023987e388911af815882b183c72b436a839e880ad&w=1380" alt="Profile Image 2" />
+            </div>
+  
+            <!-- Name and profession -->
+            <div class="name-profession">
+              <span class="name">Монетка</span>
+              <span class="profession">"Орел" или "Решка"</span>
+            </div>
+  
+            <!-- Rating -->
+            <div class="rating">
+              <i class="far fa-star"></i>
+              <i class="far fa-star"></i>
+              <i class="far fa-star"></i>
+              <i class="far fa-star"></i>
+              <i class="far fa-star"></i>
+            </div>
+  
+            <!-- Buttons -->
+            <div class="button">
+                <button class="aboutMe">Играть</button>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Swiper slide item 3 -->
+        <div class="swiper-slide card">
+          <div class="card-content">
+            <!-- Profile image -->
+            <div class="image">
+              <img src="https://img.freepik.com/free-vector/card-game-concept-illustration_114360-6579.jpg?t=st=1729268434~exp=1729272034~hmac=892216fd47305f74c1e7d33440e4ca24db240a541157a5f0add106de325af4e2&w=1380" alt="Profile Image 3" />
+            </div>
+
+            <!-- Name and profession -->
+            <div class="name-profession">
+              <span class="name">Выше-ниже</span>
+              <span class="profession">Карточная игра</span>
+            </div>
+  
+            <!-- Rating -->
+            <div class="rating">
+              <i class="far fa-star"></i>
+              <i class="far fa-star"></i>
+              <i class="far fa-star"></i>
+              <i class="far fa-star"></i>
+              <i class="far fa-star"></i>
+            </div>
+  
+            <!-- Buttons -->
+            <div class="button">
+                <button class="aboutMe">Играть</button>
+            </div>
+          </div>
+        </div>
+  
+
+        
+      </div>
+    </div>
+  
+    <!-- Swiper navigation buttons -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
+  </section>
+  
+  <!-- Swiper JS -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      spaceBetween: 30,
+      grabCursor: true,
+      loop: true,
+      // Pagination
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      // Next and previous navigation
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      // Responsive breakpoints
+      breakpoints: {
+        0: {
+          slidesPerView: 1
+        },
+        768: {
+          slidesPerView: 2
+        },
+        1024: {
+          slidesPerView: 3
+        }
+      }
+    });
+  </script>
+
+
+</body>
+  <script src="script.js"></script>
+
+</html>
