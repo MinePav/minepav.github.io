@@ -8,7 +8,14 @@
   font-weight: 700;
 }
 
-html { height: 100%; }
+html { 
+  height: 100%; 
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+}
 
 body {
   width: 100%;
@@ -19,6 +26,11 @@ body {
   overflow: hidden;
   position: relative;
   overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
 }
 
 .active { color: #01796F;}
