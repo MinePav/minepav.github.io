@@ -6,7 +6,6 @@
   box-sizing: border-box;
   font-family: 'Inter', sans-serif;
   font-weight: 700;
-  outline: solid 1px red;
 }
 
 html { height: 100%; }
