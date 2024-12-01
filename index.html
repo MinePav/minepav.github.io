@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="FS.ico" type="image/x-icon" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css" />
+    <script src="https://kit.fontawesome.com/49ea9dc72c.js" crossorigin="anonymous"></script>
+    <title>FriendShire ◦ Главная</title>
+</head>
+
+<body class="smooth-scroll">
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <a href="#"><img src="FS.png" /></a>
+            </div>
+            <ul class="links">
+                <li><a href="#" class="active">Главная</a></li>
+                <li><a href="#">О сервере</a></li>
+                <li><a href="#">Правила</a></li>
+                <li><a href="#">FAQ & Инфо</a></li>
+                <li>
+                    <a style="margin-left: -10px; font-size: 21px" href="https://t.me/FriendShieldofficial" target="_blank"><i class="bx bxl-telegram"></i
+            ></a>
+                </li>
+                <li>
+                    <a style="margin-left: -10px; font-size: 21px" href="https://discord.gg/6V999mU5qH" target="_blank"><i class="bx bxl-discord-alt"></i
+            ></a>
+                </li>
+            </ul>
+            <a href="#" class="action_btn"><i
+            style="margin-right: 3px"
+            class="fa-solid fa-arrow-right-to-bracket"
+          ></i
+          >Авторизация</a
+        >
+        <div class="toggle_btn">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </div>
+
+      <div class="dropdown_menu">
+        <li><a href="#">Главная</a></li>
+            <li><a href="#">О сервере</a></li>
+            <li><a href="#">Правила</a></li>
+            <li><a href="#">FAQ & Инфо</a></li>
+            <div class="social">
+                <li>
+                    <a style="margin-left: -10px; font-size: 21px" href="https://t.me/FriendShieldofficial"><i class="bx bxl-telegram"></i
+            ></a>
+                </li>
+                <li>
+                    <a style="margin-left: -10px; font-size: 21px" href="https://discord.gg/6V999mU5qH"><i class="bx bxl-discord-alt"></i
+            ></a>
+                </li>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="circle frst"></div>
+    </div>
+
+    <div class="rounded-frame">
+        <div class="textDiv">
+            <i class="fa-solid fa-user-group"></i>
+            <h1 class="textHead">FriendShire</h1>
+            <p>Сервер в добрым комьюнити</p>
+            <i class="fa-solid fa-location-arrow"></i>
+            <h1 class="textHead">Сезон 1</h1>
+            <p>На данный момент на сервере FriendShire проходит 1-ый сезон</p>
+        </div>
+
+        <a href="https://discord.gg/6V999mU5qH" class="discordBtn">
+            <i class="fa-brands fa-discord"></i> Наш Discord-сервер
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </a>
+    </div>
+
+      
+      <div class="smooth-scrollbar"></div>
+
+
+
+
+
+    <script>
+        const toggleBtn = document.querySelector(".toggle_btn");
+        const toggleBtnIcon = document.querySelector(".toggle_btn i");
+        const dropDownMenu = document.querySelector(".dropdown_menu");
+
+        toggleBtn.onclick = function() {
+            dropDownMenu.classList.toggle("open");
+            const isOpen = dropDownMenu.classList.contains("open");
+
+            toggleBtnIcon.classList = isOpen ?
+                "fa-solid fa-xmark" :
+                "fa-solid fa-bars";
+        };
+    </script>
+    <script>
+        const smoothCoef = 0.05;
+        const smoothScroll = document.querySelector(".smooth-scroll");
+        const smoothScrollBar = document.querySelector(".smooth-scrollbar");
+
+        function onResize(e) {
+            smoothScrollBar.style.height = smoothScroll.offsetHeight + "px";
+        }
+
+        window.addEventListener("resize", onResize);
+        onResize();
+
+        let prevY = window.scrollY;
+        let curY = window.scrollY;
+        let y = window.scrollY;
+        let dy;
+
+        function loop(now) {
+            curY = window.scrollY;
+            dy = curY - prevY;
+            y = Math.abs(dy) < 1 ? curY : y + dy * smoothCoef;
+            prevY = y;
+            smoothScroll.style.transform = `translate3d(0,${-y}px,0)`;
+
+            requestAnimationFrame(loop);
+        }
+        requestAnimationFrame(loop);
+    </script>
+</body>
+
+</html>
