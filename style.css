@@ -267,7 +267,7 @@ header { position: relative; padding: 0 5%; }
     border-radius: 50%;
     animation: blink 2s infinite ease-in-out;
     display: flex;
-    margin-top: 4px;
+    margin-top: 3px;
   }
   .blinkCircle.orange {
     background-color: #ff6500;

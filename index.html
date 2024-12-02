@@ -61,7 +61,7 @@
     </header>
 
     <p class="headIP">IP (Нажми, чтобы скорировать)<p style="cursor: pointer;" id="text-to-copy" class="headIP">play.friendshire.net</p></p>
-    <p class="headIP" id="copy-status" style="color: #fff;"></p>
+    <p class="headIP" id="copy-status" style="color: #6495ED; font-size: 14px;"></p>
 
     <div class="container">
         <div class="circle frst"></div>
@@ -123,32 +123,8 @@
 
     </div>
     
-
       <div class="smooth-scrollbar"></div>
 
-
-      <script>
-        // Находим элемент, который нужно копировать
-        const textToCopy = document.getElementById('text-to-copy');
-        const copyStatus = document.getElementById('copy-status');
-
-        // Добавляем событие клика
-        textToCopy.addEventListener('click', async () => {
-            try {
-                // Копируем текст в буфер обмена
-                await navigator.clipboard.writeText(textToCopy.textContent);
-
-                // Уведомление об успешном копировании
-                copyStatus.textContent = 'Текст успешно скопирован!';
-                setTimeout(() => copyStatus.textContent = '', 2000); // Очистить уведомление через 2 секунды
-            } catch (error) {
-                // Уведомление о неудаче
-                copyStatus.textContent = 'Ошибка при копировании текста.';
-                setTimeout(() => copyStatus.textContent = '', 2000);
-                console.error('Ошибка копирования:', error);
-            }
-        });
-    </script>
     <script>
         const toggleBtn = document.querySelector(".toggle_btn");
         const toggleBtnIcon = document.querySelector(".toggle_btn i");
@@ -165,14 +141,14 @@
     </script>
     <script>
         const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
-
         if (isTouchDevice) {
             console.log("Плавная прокрутка отключена");
         } else {
             document.addEventListener('DOMContentLoaded', () => {
                 console.log("Плавная прокрутка включена");
-                // Ваш скрипт
-                // Например:
+
+                // -----------------------
+                // Плавная прокрутка 
                 const smoothCoef = 0.05;
                 const smoothScroll = document.querySelector(".smooth-scroll");
                 const smoothScrollBar = document.querySelector(".smooth-scrollbar");
@@ -200,7 +176,36 @@
                 }
                 requestAnimationFrame(loop);
                     });
+
+                // -----------------------
+                // Копирование айпи
+                const textToCopy = document.getElementById('text-to-copy');
+                const copyStatus = document.getElementById('copy-status');
+
+                textToCopy.addEventListener('click', async () => {
+                    try {
+                        await navigator.clipboard.writeText(textToCopy.textContent);
+
+                        copyStatus.textContent = 'Текст успешно скопирован!';
+                        setTimeout(() => copyStatus.textContent = '', 2000);
+                    } catch (error) {
+                        copyStatus.textContent = 'Ошибка при копировании текста';
+                        setTimeout(() => copyStatus.textContent = '', 2000);
+                        console.error('Ошибка копирования:', error);
+                    }
+                });
         }  
+    </script>
+    <script>
+        const textToCopy = document.getElementById('text-to-copy');
+        textToCopy.addEventListener('click', async () => {
+            try {
+                await navigator.clipboard.writeText(textToCopy.textContent);  
+                console.log("Текст успешно скопирован!")  
+            } catch (error) {
+                console.log("Ошибка при копировании текста")
+            }
+        });
     </script>
 </body>
 
